@@ -1,0 +1,304 @@
+=<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دوره کامل HTML - جلسات ۱ تا ۷</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- Sidebar with sections -->
+<div class="sessions-list fixed right-0 top-0 p-4 bg-white shadow-lg w-60" id="menu">
+    <ul>
+        <li>
+            <a href="javascript:void(0);" onclick="toggleSubList('html-sessions')">HTML</a>
+            <ul class="sub-list" id="html-sessions">
+                <li><a href="#session1">جلسه ۱: مبانی HTML و ساختار کلی صفحات وب</a></li>
+                <li><a href="#session2">جلسه ۲: متون و قالب‌بندی پیشرفته HTML</a></li>
+                <li><a href="#session3">جلسه ۳: لینک‌ها و تصاویر HTML</a></li>
+                <li><a href="#session4">جلسه ۴: جداول و فرم‌های پیشرفته HTML</a></li>
+                <li><a href="#session5">جلسه ۵: عناصر چندرسانه‌ای</a></li>
+                <li><a href="#session6">جلسه ۶: متون، لینک‌ها و تصاویر در HTML</a></li>
+                <li><a href="#session7">جلسه ۷: متون، لینک‌ها و تصاویر در HTML</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!-- Main Content -->
+<div class="main-content ml-64 mr-32"> <!-- فاصله بیشتر از منو -->
+    <h1 class="text-5xl font-bold text-center mb-12 text-blue-900">دوره کامل HTML</h1>
+
+    <div class="session-container">
+
+        <!-- Session 1 -->
+        <div id="session1" class="bg-white p-8 rounded-xl shadow-2xl mb-12">
+            <div class="section-title">جلسه ۱: مبانی HTML و ساختار کلی صفحات وب</div>
+            <h3 class="text-xl font-semibold mb-4">🎯 اهداف یادگیری:</h3>
+            <ul class="list-disc mr-6">
+                <li>درک مفهوم تگ‌های HTML</li>
+                <li>آشنایی با ساختار سلسله مراتبی تگ‌ها</li>
+                <li>ایجاد اولین صفحه وب</li>
+            </ul>
+
+            <div class="mt-6">
+                <h4 class="font-bold mb-2">🔥 مفاهیم پایه:</h4>
+                <p>هر سند HTML از تگ‌های تو در تو تشکیل شده است. ساختار اصلی شامل:</p>
+                <div class="code-block rtl">
+                    <button class="copy-btn" onclick="copyToClipboard(this)">📋 کپی</button>
+                    <pre class="text-left">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;عنوان صفحه&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- محتوای اصلی --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                </div>
+            </div>
+
+            <div class="note">
+                <strong>📌 نکته حیاتی:</strong> همیشه تگ &lt;!DOCTYPE html&gt; را در خط اول قرار دهید
+            </div>
+            
+
+            <div class="exercise">
+                <h4 class="font-bold text-lg mb-3">🧑‍💻 تمرین عملی:</h4>
+                <p>صفحه‌ای ایجاد کنید که شامل:</p>
+                <ul class="list-disc mr-6">
+                    <li>عنوان صفحه به نام "صفحه تمرینی"</li>
+                    <li>یک عنوان h1 با متن "سلام دنیا!"</li>
+                    <li>یک پاراگراف با متن دلخواه</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Session 2 -->
+        <div id="session2" class="bg-white p-8 rounded-xl shadow-2xl mb-12">
+            <div class="section-title">جلسه ۲: متون و قالب‌بندی پیشرفته</div>
+            <div class="mt-6">
+                <h4 class="font-bold mb-2">📚 تگ‌های متنی پیشرفته:</h4>
+                <p>برای قالب‌بندی متن از تگ‌های زیر استفاده می‌کنیم:</p>
+                <div class="code-block rtl">
+                    <button class="copy-btn" onclick="copyToClipboard(this)">📋 کپی</button>
+                    <pre class="text-left">
+&lt;p&gt;این یک متن &lt;strong&gt;پررنگ&lt;/strong&gt; است&lt;/p&gt;
+&lt;p&gt;متن &lt;em&gt;مورب&lt;/em&gt; و &lt;u&gt;زیرخط دار&lt;/u&gt;&lt;/p&gt;
+&lt;blockquote&gt;این یک نقل قول بلند است&lt;/blockquote&gt;
+&lt;pre&gt;متن پیش‌فرض با فونت مونواسپیس&lt;/pre&gt;
+                    </pre>
+                </div>
+            </div>
+
+            <div class="note">
+                <strong>📌 تفاوت strong و b:</strong> تگ strong برای اهمیت سمانتیک استفاده می‌شود
+            </div>
+
+            <div class="exercise">
+                <h4 class="font-bold text-lg mb-3">🧑‍💻 تمرین عملی:</h4>
+                <p>صفحه‌ای ایجاد کنید شامل:</p>
+                <ul class="list-disc mr-6">
+                    <li>یک لیست شماره‌دار با ۳ آیتم</li>
+                    <li>یک نقل قول با استفاده از blockquote</li>
+                    <li>متن ترکیبی با strong و em</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Session 3 -->
+        <div id="session3" class="bg-white p-8 rounded-xl shadow-2xl mb-12">
+            <div class="section-title">جلسه ۳: لینک‌ها و تصاویر HTML</div>
+            <div class="mt-6">
+                <h4 class="font-bold mb-2">🔗 لینک‌ها:</h4>
+                <p>برای ایجاد لینک‌ها از تگ <code>&lt;a&gt;</code> استفاده می‌کنیم:</p>
+                <div class="code-block rtl">
+                    <button class="copy-btn" onclick="copyToClipboard(this)">📋 کپی</button>
+                    <pre class="text-left">
+&lt;a href="https://www.example.com"&gt;لینک به Example&lt;/a&gt;
+                    </pre>
+                </div>
+
+                <h4 class="font-bold mt-6 mb-2">📷 تصاویر:</h4>
+                <p>برای اضافه کردن تصاویر از تگ <code>&lt;img&gt;</code> استفاده می‌کنیم:</p>
+                <div class="code-block rtl">
+                    <button class="copy-btn" onclick="copyToClipboard(this)">📋 کپی</button>
+                    <pre class="text-left">
+&lt;img src="image.jpg" alt="تصویر مثال"&gt;
+                    </pre>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h4 class="font-bold text-lg mb-3">🧑‍💻 تمرین عملی:</h4>
+                <p>صفحه‌ای ایجاد کنید شامل:</p>
+                <ul class="list-disc mr-6">
+                    <li>لینک به یک وب‌سایت خارجی</li>
+                    <li>تصویر از اینترنت یا کامپیوتر خود</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Session 4 -->
+        <div id="session4" class="bg-white p-8 rounded-xl shadow-2xl mb-12">
+            <div class="section-title">جلسه ۴: جداول و فرم‌های پیشرفته</div>
+            <div class="mt-6">
+                <h4 class="font-bold mb-2">📊 جداول:</h4>
+                <p>برای ایجاد جداول از تگ‌های <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, و <code>&lt;td&gt;</code> استفاده می‌کنیم:</p>
+                <div class="code-block rtl">
+                    <button class="copy-btn" onclick="copyToClipboard(this)">📋 کپی</button>
+                    <pre class="text-left">
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;نام&lt;/th&gt;
+        &lt;th&gt;سن&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;علی&lt;/td&gt;
+        &lt;td&gt;۲۵&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+                    </pre>
+                </div>
+
+                <h4 class="font-bold mt-6 mb-2">📝 فرم‌ها:</h4>
+                <p>برای ایجاد فرم‌ها از تگ‌های <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code> استفاده می‌کنیم:</p>
+                <div class="code-block rtl">
+                    <button class="copy-btn" onclick="copyToClipboard(this)">📋 کپی</button>
+                    <pre class="text-left">
+&lt;form&gt;
+    &lt;input type="text" name="name" placeholder="نام"&gt;
+    &lt;textarea name="message"&gt;پیام خود را وارد کنید&lt;/textarea&gt;
+    &lt;button type="submit"&gt;ارسال&lt;/button&gt;
+&lt;/form&gt;
+                    </pre>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h4 class="font-bold text-lg mb-3">🧑‍💻 تمرین عملی:</h4>
+                <p>صفحه‌ای ایجاد کنید شامل:</p>
+                <ul class="list-disc mr-6">
+                    <li>یک جدول با دو ستون (نام و سن)</li>
+                    <li>یک فرم با فیلدهای نام، پیام و دکمه ارسال</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Session 5 -->
+        <div id="session5" class="bg-white p-8 rounded-xl shadow-2xl mb-12">
+            <div class="section-title">جلسه ۵: عناصر چندرسانه‌ای</div>
+            <div class="mt-6">
+                <h4 class="font-bold mb-2">🎥 ویدیوها:</h4>
+                <p>برای اضافه کردن ویدیو از تگ <code>&lt;video&gt;</code> استفاده می‌کنیم:</p>
+                <div class="code-block rtl">
+                    <button class="copy-btn" onclick="copyToClipboard(this)">📋 کپی</button>
+                    <pre class="text-left">
+&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;پشتیبانی نمی‌شود&gt;&lt;/video&gt;
+                    </pre>
+                </div>
+
+                <h4 class="font-bold mt-6 mb-2">🎶 صدا:</h4>
+                <p>برای اضافه کردن فایل‌های صوتی از تگ <code>&lt;audio&gt;</code> استفاده می‌کنیم:</p>
+                <div class="code-block rtl">
+                    <button class="copy-btn" onclick="copyToClipboard(this)">📋 کپی</button>
+                    <pre class="text-left">
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mp3"&gt;
+    &lt;پشتیبانی نمی‌شود&gt;&lt;/audio&gt;
+                    </pre>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h4 class="font-bold text-lg mb-3">🧑‍💻 تمرین عملی:</h4>
+                <p>صفحه‌ای ایجاد کنید شامل:</p>
+                <ul class="list-disc mr-6">
+                    <li>یک ویدیو با دکمه کنترل</li>
+                    <li>یک فایل صوتی قابل پخش</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Session 6 -->
+        <div id="session6" class="bg-white p-8 rounded-xl shadow-2xl mb-12">
+            <div class="section-title">جلسه ۶: متون، لینک‌ها و تصاویر در HTML</div>
+            <div class="mt-6">
+                <h4 class="font-bold mb-2">🔗 لینک‌ها در تصاویر:</h4>
+                <p>برای اضافه کردن لینک به یک تصویر از تگ <code>&lt;a&gt;</code> همراه با <code>&lt;img&gt;</code> استفاده می‌کنیم:</p>
+                <div class="code-block rtl">
+                    <button class="copy-btn" onclick="copyToClipboard(this)">📋 کپی</button>
+                    <pre class="text-left">
+&lt;a href="https://www.example.com"&gt;
+    &lt;img src="image.jpg" alt="تصویر"&gt;
+&lt;/a&gt;
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Session 7 -->
+        <div id="session7" class="bg-white p-8 rounded-xl shadow-2xl mb-12">
+            <div class="section-title">جلسه ۷: متون، لینک‌ها و تصاویر در HTML</div>
+            <div class="mt-6">
+                <h4 class="font-bold mb-2">📄 فایل‌ها:</h4>
+                <p>برای لینک دادن به یک فایل دانلودی از تگ <code>&lt;a&gt;</code> با ویژگی <code>download</code> استفاده می‌کنیم:</p>
+                <div class="code-block rtl">
+                    <button class="copy-btn" onclick="copyToClipboard(this)">📋 کپی</button>
+                    <pre class="text-left">
+&lt;a href="file.pdf" download&gt;دانلود فایل PDF&lt;/a&gt;
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function copyToClipboard(btn) {
+        const codeBlock = btn.closest('.code-block').querySelector('pre');
+        const range = document.createRange();
+        range.selectNode(codeBlock);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        alert("کد کپی شد!");
+    }
+
+    function toggleSubList(id) {
+        const subList = document.getElementById(id);
+        subList.classList.toggle('show');
+    }
+
+    window.addEventListener('scroll', () => {
+        const menu = document.getElementById('menu');
+        if (window.scrollY > 100) {
+            menu.classList.add('sticky');
+        } else {
+            menu.classList.remove('sticky');
+        }
+    });
+
+    // Sticky sidebar
+    window.onscroll = function() {stickyMenu()};
+    var menu = document.getElementById("menu");
+    var sticky = menu.offsetTop + 500;  // فاصله از بالای صفحه
+    function stickyMenu() {
+        if (window.pageYOffset > sticky) {
+            menu.classList.add("sticky");
+        } else {
+            menu.classList.remove("sticky");
+        }
+    }
+</script>
+
+</body>
+</html>

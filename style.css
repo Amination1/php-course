@@ -1,0 +1,170 @@
+/* استایل کلی برای صفحه */
+
+/* اضافه کردن پیمایش نرم به کل صفحه */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding: 20px;
+}
+
+.sessions-list {
+    width: 250px;
+    padding: 20px;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sessions-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sessions-list li {
+    margin-bottom: 10px;
+}
+
+.sessions-list a {
+    display: block;
+    padding: 10px;
+    background-color: #f0f4f8;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+}
+
+.sessions-list a:hover {
+    background-color: #e2e8f0;
+}
+
+.sub-list {
+    margin-left: 20px;
+    display: none;
+}
+
+.sub-list.show {
+    display: block;
+}
+
+.main-content {
+    margin-left: 270px; /* فاصله از منو */
+    padding: 20px;
+}
+
+.session-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.session-container .session {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* .session-title {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #ff9800;
+} */
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a365d;
+    border-right: 5px solid #2b6cb0;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* .code-block {
+    background: #2d3748;
+    color: #f7fafc;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+    direction: ltr;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+} */
+
+button.copy-btn {
+    background-color: #3182ce;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
+    margin-top: -10px; /* تنظیم فاصله از بالای کد بلوک */
+    transition: background-color 0.3s ease;
+}
+
+button.copy-btn:hover {
+    background-color: #2b6cb0;
+}
+
+.code-block {
+    position: relative; /* برای قرار دادن دکمه کپی در موقعیت مناسب */
+    background: #2d3748;
+    color: #f7fafc;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+    direction: ltr;
+    text-align: left;
+    overflow: auto; /* برای مطمئن شدن از نمایش صحیح محتوا */
+    
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.exercise {
+    background: #ebf8ff;
+    border-right: 4px solid #4299e1;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+}
+.note {
+    background: #fff5f5;
+    border-right: 4px solid #fc8181;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+@media (max-width: 768px) {
+    .sessions-list {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
